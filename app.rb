@@ -55,7 +55,7 @@ post '/push' do
 
   return logger.error "Not found: #{repo['path']}" unless Dir.exist? path
 
-  Thread.start do
+  fork do
     # Run commands in "path"
     Dir.chdir path do
       repo['commands'].each do |command|
