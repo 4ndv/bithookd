@@ -72,10 +72,10 @@ post '/push' do
         system command, chdir: path
       end
 
-      deploy_in_progress -= name_and_branch
+      deploy_in_progress.delete name_and_branch
     rescue
       # Removing from "in progress" if failed
-      deploy_in_progress -= name_and_branch
+      deploy_in_progress.delete name_and_branch
       # re-raise last error
       raise
     end
