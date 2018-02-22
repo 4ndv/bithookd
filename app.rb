@@ -6,7 +6,7 @@ require 'json'
 deploy_in_progress = []
 
 allowed_ranges = [
-  IPAddr.new('104.192.143.0/24'),
+  IPAddr.new('104.192.136.0/21'),
   IPAddr.new('34.198.203.127'),
   IPAddr.new('34.198.178.64'),
   IPAddr.new('34.198.32.85')
